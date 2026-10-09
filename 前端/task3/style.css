@@ -1,0 +1,66 @@
+*{
+    font-family: 'YouYuan'; /*设置字体*/
+    font-size: 25px; /*设置字体大小*/
+}
+
+/*设置背景*/
+body{
+    background-image:url('picture/星奏.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #f9e0e5;
+}
+
+/*导航栏*/
+.nav{
+    background-color: azure; /*做一个底*/
+    border-radius: 10px;/*圆角*/
+    padding: 8px; /*调个内边距*/
+}
+/*悬停变色*/
+.nav:hover{
+    background-color: rgb(215, 228, 228);
+}
+
+
+/*更改表格样式，换个底色，描个边*/
+.chart{
+    background-color: rgb(216, 230, 255);
+    border: 3px,solid,#929292;
+}
+.chart th,.chart tr,.chart td{
+    background-color: rgb(216, 230, 255);
+    border: 3px,solid,#929292;
+}
+
+/*这里是对于整面照片墙的设计*/
+.wall{
+    display: grid; /*使用grid更适合网格布局*/
+    width: 50%; /*占页面一半*/
+    grid-template-columns: repeat(5, 1fr); /*column是列，fr可以动态地调整每张照片的宽度 repeat5次1fr即为五等分*/
+    grid-template-rows:repeat(5,1fr); /*同上，这里设置5行*/
+    gap: 8px; /*设置每个格子的间隔*/
+    padding: 10px; /*设置内边距*/
+    background-color: #ffe2f5; /*挑个可爱的颜色*/
+}
+
+/*这里是对于每个格子的照片的设计*/
+.pic img{
+    aspect-ratio: 1/1; /*照片固定为正方形 不写这个图片会是各种形状*/
+    width: 100%; /*让图片填满格子 不写这个图片会很大，铺满页面*/
+    object-fit: cover; /*覆盖模式 不写这个默认是fill，图片比例会变*/
+    border-radius: 5px; /*圆圆的角*/
+    transition: transform 0.2s; /*设置进行变换的时间*/
+}
+
+/*悬停变大*/
+.pic:hover img{
+    transform: scale(1.1);
+}
+
+.W{
+    gap:20px; /*两个墙之间来点间隔*/
+    display: flex; /*让他们两个水平并排*/
+}
